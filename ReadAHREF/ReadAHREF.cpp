@@ -22,7 +22,12 @@ int main() {
 							if (cin.get(t)) {
 								string res = "";
 								while (cin.get(t) && t != '"') {
-									res += t;
+									if (t == '/') {
+										res += '/';
+									}
+									else {
+										res += t;
+									}
 								}
 								if (*(res.end() - 1) == '/') {
 									res.pop_back();
